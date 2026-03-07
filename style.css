@@ -29,6 +29,10 @@ main img {
   margin-top: 16px;
 }
 
+main a {
+    color: inherit;
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
@@ -93,12 +97,6 @@ main img {
   color: #A5662B;
 }
 
-main a {
-    color: inherit;
-
-
-}
-
 /* Header bild */
 /* Bilden är en Adobe Stock bild */
 .header-bild {
@@ -135,6 +133,24 @@ main {
     padding: 2rem;
 }
 
+/* Konserter */
+
+.konsert {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.konsert img {
+  width: 240px;
+  height: auto;
+}
+
+.konsert-text h2 {
+  margin-bottom: 0px;
+} 
+
 /* CSS för formuläret (CSS från föregående uppgift)*/
 
 /* Sätter bakgrundsfärg, font mm. Väljer display grid som ersätter <br> i första uppgiften */
@@ -154,6 +170,7 @@ form {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
   margin: 0 auto;
   margin-bottom: 10px;
+  margin-top: 32px;
 
 }
 
@@ -198,16 +215,16 @@ form > div:last-child {
   border: none;
 }
 
-/* Sätter bakgrundsfärgen till "ljusblå" för att den ska vara mer inbjudande än reset */
+/* Sätter bakgrundsfärgen till "brons" för att matcha textfärgen till den aktiva sidan i menyn */
 .knappar input[type="submit"] {
-  background-color: #3466d1;
+  background-color: #A5662B;
   color: #ffffff;
   font-weight: 500;
 }
 
 /* Hovereffekt */
 .knappar input[type="submit"]:hover {
-  background-color: #3558cc;
+  background-color: #bf7632;
 }
 
 /* Sätter bakgrundsfärgen till "ljusgrå" för att skilja den från den mer inbjudande submit knappen */
@@ -220,5 +237,14 @@ form > div:last-child {
 .knappar input[type="reset"]:hover {
   background-color: #e4e6eb;
 }
-  
+
+/* Mobilanpassning */
+
+@media (max-width: 600px) {
+
+  .konsert {
+    flex-direction: column;
+  }
+
+}
 
