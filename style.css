@@ -1,0 +1,224 @@
+/* Border box */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+main h2, h3, h4, h5 {
+  margin-top: 32px;
+}
+
+main p {
+  margin-bottom: 16px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 16px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem 3rem;
+  color: white;
+
+  width: 100%;
+
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: background-color 0.3s ease;
+
+}
+
+/* Navbar när man scrollat */
+.navbar.scrolled {
+  background: black;
+  padding: 1.1rem 3rem;
+}
+
+.navbar.scrolled .logo img {
+  height: 30px;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;       
+  width: auto;
+  display: block;
+
+
+  transition: height 0.3s ease;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu a {
+  color: inherit;
+  text-decoration: none;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.menu a.active {
+  /*color: #B87333;*/
+  color: #A5662B;
+}
+
+main a {
+    color: inherit;
+
+
+}
+
+/* Header bild */
+/* Bilden är en Adobe Stock bild */
+.header-bild {
+  min-height: 60vh;
+  max-height: 80vh;
+  background-image: url("bilder/header_bild.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-align: center;
+}
+
+footer {
+  border-top: 1px solid rgba(0,0,0,0.20);
+  padding: 32px 0;
+}
+
+footer div {
+  max-width: 800px;
+  margin: 10px auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  
+}
+
+main {
+   max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* CSS för formuläret (CSS från föregående uppgift)*/
+
+/* Sätter bakgrundsfärg, font mm. Väljer display grid som ersätter <br> i första uppgiften */
+
+
+/* Design för själva formläret som agerar som en "box" */
+
+form {
+  background-color: #ffffff;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 6px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+}
+
+/* Mellanrum mellan div-arna */
+  form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+/* Sista div ska inte ha marginal under */
+form > div:last-child {
+  margin-bottom: 0;
+}
+
+/* Marginal för "rubrikerna" (label) */
+  form label {
+    margin-bottom: 2px;
+  }
+
+/* Design av input text och email, select och textarea. Större än standard. */
+ form input[type="text"], form input[type="email"], form select, form textarea {
+  width: 100%;
+  padding: 4px 8px;
+  box-sizing: border-box;
+}
+
+/* Design av submit och reset. Jag lägger väljer att använda flex-direction row för att få de på samma rad. */
+.knappar {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.knappar input {
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Sätter bakgrundsfärgen till "ljusblå" för att den ska vara mer inbjudande än reset */
+.knappar input[type="submit"] {
+  background-color: #3466d1;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Hovereffekt */
+.knappar input[type="submit"]:hover {
+  background-color: #3558cc;
+}
+
+/* Sätter bakgrundsfärgen till "ljusgrå" för att skilja den från den mer inbjudande submit knappen */
+.knappar input[type="reset"] {
+  background-color: #ebedf2;
+  color: #374151;
+}
+
+/* Hovereffekt */
+.knappar input[type="reset"]:hover {
+  background-color: #e4e6eb;
+}
+  
+
