@@ -5,6 +5,8 @@
   padding: 0;
 }
 
+/* Font och lineheight */
+
 body { 
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -15,8 +17,17 @@ h1, h2, h3, h4, h5 {
   line-height: 1.2;
 }
 
+/* Sätter bredden på main till 800px */
+
+main {
+   max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
 main h2, h3, h4, h5 {
   margin-top: 32px;
+  margin-bottom: 6px;
 }
 
 main p {
@@ -31,6 +42,19 @@ main img {
 
 main a {
     color: inherit;
+}
+
+footer {
+  border-top: 1px solid rgba(0,0,0,0.20);
+  padding: 32px 0;
+}
+
+footer div {
+  max-width: 800px;
+  margin: 10px auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  
 }
 
 /* Navbar */
@@ -65,7 +89,7 @@ main a {
   height: 30px;
 }
 
-/* Logo */
+/* Loggan i navbaren */
 .logo img {
   height: 50px;       
   width: auto;
@@ -75,7 +99,7 @@ main a {
   transition: height 0.3s ease;
 }
 
-/* Menu */
+/* Meny */
 .menu {
   list-style: none;
   display: flex;
@@ -112,25 +136,6 @@ main a {
 
   color: white;
   text-align: center;
-}
-
-footer {
-  border-top: 1px solid rgba(0,0,0,0.20);
-  padding: 32px 0;
-}
-
-footer div {
-  max-width: 800px;
-  margin: 10px auto;
-  padding-left: 32px;
-  padding-right: 32px;
-  
-}
-
-main {
-   max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
 }
 
 /* Medlem och sidomeny */
@@ -233,6 +238,26 @@ main {
 
 .notlista li {
   margin-bottom: 8px;
+}
+
+/* Repetitionstider - tabell */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  border-bottom: 2px solid black;
+}
+
+td {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 
@@ -338,6 +363,17 @@ form > div:last-child {
 
   .medlem-layout {
     flex-direction: column;
+  }
+
+   .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 20px;
   }
 
 }
