@@ -133,6 +133,24 @@ main {
     padding: 2rem;
 }
 
+/* Galleri */
+
+.galleri {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.galleri img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.galleri img:hover {
+  opacity: 0.8;
+}
+
 /* Konserter */
 
 .konsert {
@@ -244,6 +262,10 @@ form > div:last-child {
 
   .konsert {
     flex-direction: column;
+  }
+
+  .galleri {
+    grid-template-columns: 1fr;
   }
 
 }
