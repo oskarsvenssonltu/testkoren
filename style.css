@@ -102,9 +102,9 @@ main a {
 .header-bild {
   min-height: 60vh;
   max-height: 80vh;
-  background-image: url("bilder/header_bild.jpg");
+  background-image: url("bilder/bild_6.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 25%;
 
   display: flex;
   align-items: center;
@@ -133,6 +133,43 @@ main {
     padding: 2rem;
 }
 
+/* Medlem och sidomeny */
+
+.medlem-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.sidomeny {
+  width: 180px;
+  border-right: 1px solid rgba(0,0,0,0.15);
+  padding-right: 1.5rem;
+}
+
+.medlem-innehall {
+  flex: 1;
+}
+
+.sidomeny a {
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 0,88rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidomeny ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidomeny a.active {
+  color: #A5662B;
+  font-weight: 600;
+}
+
 /* Galleri */
 
 .galleri {
@@ -151,9 +188,9 @@ main {
   opacity: 0.8;
 }
 
-/* Konserter */
+/* Konserter och kontakt */
 
-.konsert {
+.konsert, .kontakt {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 2rem;
@@ -165,15 +202,42 @@ main {
   height: auto;
 }
 
-.konsert-text h2 {
+.kontakt img {
+  width: 210px;
+  height: auto;
+}
+
+.konsert-text, h2 {
   margin-bottom: 0px;
 } 
 
-/* CSS för formuläret (CSS från föregående uppgift)*/
+.kontakt-text h2 {
+  margin-bottom: 0px;
+  font-size: 1.2rem;
+} 
 
+.kontakt p {
+  margin-bottom: 0px;
+}
+
+.kontakt .titel {
+  margin-bottom: 14px;
+}
+
+/* Notmaterial */
+
+.notlista {
+  list-style: none;
+  padding: 0;
+}
+
+.notlista li {
+  margin-bottom: 8px;
+}
+
+
+/* Formuläret (CSS från föregående uppgift)*/
 /* Sätter bakgrundsfärg, font mm. Väljer display grid som ersätter <br> i första uppgiften */
-
-
 /* Design för själva formläret som agerar som en "box" */
 
 form {
@@ -266,6 +330,14 @@ form > div:last-child {
 
   .galleri {
     grid-template-columns: 1fr;
+  }
+
+  .kontakt {
+    flex-direction: column;
+  }
+
+  .medlem-layout {
+    flex-direction: column;
   }
 
 }
